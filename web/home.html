@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="newstyle.css">   
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            
+            <div class="container">
+                
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img  src="logo.png">
+                 
+                </div>
+<div id="body"> 
+  
+<div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i  class="fas fa-plus" style="margin-top: -20px; margin-left: -10px;"></i>
+  </div>
+  
+  <div class="chat-box">
+    <div class="chat-box-header">
+      ChatBot
+      <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+    </div>
+    <div class="chat-box-body">
+      <div class="chat-box-overlay">   
+      </div>
+      <div class="chat-logs">
+       
+      </div><!--chat-log -->
+    </div>
+    <div class="chat-input">      
+      <form>
+        <input type="text" id="chat-input" placeholder="Send a message..."/>
+      <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+      </form>      
+    </div>
+  </div>
+</div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#carousel-example-generic">Home</a></li>
+                        <li><a href="#Nishant">feature</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">services</a></li>
+                        <li><a href="#Contact">contact</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                
+              
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="banner" style=" background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(1.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated bounceInRight" style="animation-delay: 1s"> Hello, <span>GEEK</span></h2>
+                        <h3 class="animated bounceInLeft" style="animation-delay: 2s">Like Desk like never Before</h3>
+                        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(2.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated slideInDown" style="animation-delay: 1s">Code  <span>Editor</span></h2>
+                        <h3 class="animated fadeInUp" style="animation-delay: 2s">Code Anywhere Everywhere</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0.5, 0.5)), url(3.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Coding <span>Questions</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Have a Break, Have  Coding Question</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(10.jpg);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Coding <span>Quiz</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Taste your coding skills </h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div>
+                
+               
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(5.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Code <span> Tutorial</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Never Stop Learning</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                    </div>
+                </div>
+                
+                 <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(11.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">To-DO  <span>List</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Make Todo and Schedule your Life</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                    </div>
+                </div>
+                
+                
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(6.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Expense<span> Manager</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Manage every single Penny you have</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(7.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Forum<span>for EveryOne</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Let's Contribute </h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact us</a></p>
+                    </div>
+                </div>
+              
+            </div>
+
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    
+    <div id="Nishant">
+   
+    <div class="row">
+      <div class="col-lg-6 card middle">
+        <div class="front">
+          <img src="10.jpg" alt="Nature" style="width:100%;">
+           <div class="text-block">
+      <h4>feature1</h4>
+      <p>What a beautiful sunrise</p>
+    </div>
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <h2>Nishant</h2>
+            <span>Hacker</span>
+            <div class="sm">
+              
+              <h1>Nishant</h1>
+              <button style="background-color: blue; color: white;">sumbit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of col -->
+      <div class="col-lg-6 card1 middle1">
+      <div class="front1">
+        <img src="10.jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+          <h4>feature2</h4>
+          <p>What a beautiful sunrise</p>
+        </div>
+            </div>
+            <div class="back1">
+              <div class="back-content1 middle1">
+                <h2>Nishant</h2>
+                <span>Hacker</span>
+                <div class="sm">
+                 
+                  <h1>Nishant</h1>
+                </div>
+              </div>
+            </div>
+      </div>
+      <!-- end  -->
+    </div>
+    <div class="card2 middle2">
+      <div class="front2">
+        <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+    <h4>feature3</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back2">
+        <div class="back-content2 middle2">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card3 middle3">
+      <div class="front3">
+       <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+    <h4>feature4</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back3">
+        <div class="back-content3 middle3">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+            
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card4 middle4">
+      <div class="front4">
+        <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+    <h4>feature5</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back4">
+        <div class="back-content4 middle4">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+            
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card5 middle5">
+      <div class="front5">
+      <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+    <h4>feature6</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back5">
+        <div class="back-content5 middle5">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+            
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card6 middle6">
+      <div class="front6">
+       <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block">
+    <h4>feature7</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back6">
+        <div class="back-content6 middle6">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+           
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card7 middle7">
+      <div class="front7">
+       <img src=".jpg" alt="Nature" style="width:100%;">
+         <div class="text-block" style="background-image: blue;">
+    <h4>feature8</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+      </div>
+      <div class="back7">
+        <div class="back-content3 middle3">
+          <h2>Nishant</h2>
+          <span>Hacker</span>
+          <div class="sm">
+            
+            <h1>Nishant</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end of nishamt -->
+<div><h2 style="font-size: 32px; font-weight: 500;  color: #fff; margin-top: 20%; margin-left: 90px; text-align: left;">welcome to Desk</h2>
+        <p style="text-align: left; margin-left: 90px; margin-top: 6%; color: #fff;">ihSdn oishfhno sgohgng 
+        kdd hoiosdjgSNoijosfgnfhnhgoshNg </p>
+        <br>
+        <p style="text-align: left; margin-left: 90px; color: #fff;">khfkNf kjkhfiusn iuhsldlfnsodify dfniusyfin iuu</p></div>
+
+
+
+    <!-- End .company-info -->
+
+  
+</header>
+ 
+
+
+
+
+
+
+
+         <script src="js/app.js"></script>
+    <script>
+      
+  
+  //create initial layout
+  
+  $(function() {
+  var INDEX = 0; 
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val(); 
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+    var buttons = [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ];
+    setTimeout(function() {      
+      generate_message(msg, 'user');  
+    }, 1000)
+    
+  })
+  
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    str += "          <span class=\">";
+    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+     $("#chat-input").val(''); 
+    }    
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+  }  
+  
+  function generate_button_message(msg, buttons){    
+    /* Buttons should be object array 
+      [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ]
+    */
+    INDEX++;
+    var btn_obj = buttons.map(function(button) {
+       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+    }).join('');
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+    str += "          <span class=\">";
+    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "          <div class=\"cm-msg-button\">";
+    str += "            <ul>";   
+    str += btn_obj;
+    str += "            <\/ul>";
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+    $("#chat-input").attr("disabled", true);
+  }
+  
+  $(document).delegate(".chat-btn", "click", function() {
+    var value = $(this).attr("chat-value");
+    var name = $(this).html();
+    $("#chat-input").attr("disabled", false);
+    generate_message(name, 'self');
+  })
+  
+  $("#chat-circle").click(function() {    
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+})
+  
+
+  
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.code-area {
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  width: 42%;
+  margin-top: 5px;
+  border-right:1px solid #555;
+}
+.code-area textarea {
+
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: 33.33%;
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+  background: #323b44;
+}
+.preview-area {
+  width: 57%;
+  height: 100vh;
+ margin-top: -722px;
+ margin-left: 43.5%;
+}
+.preview-area iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #fff;
+}
+button{
+  width: 80px;
+  float: right;
+  text-align: center;
+  margin-top: 9px;
+  margin-right: 20px;
+  padding: 3px 8px 5px 8px;
+  outline: none;
+   background-color:  #33bf48;
+  border-color: #238532;
+  border-radius: 7px;
+  box-shadow: rgba(254, 21, 3, 1, 1) 0px 54px 55px, rgba(254, 21, 3, 1 0.12) 0px -12px 30px, rgba(254, 21, 3, 1 0.12) 0px 4px 6px, rgba(254, 21, 3, 1, 0.17) 0px 12px 13px, rgba(254, 21, 3, 1, 0.09) 0px -3px 5px;
+}
+button:hover{
+background-color: #238532;
+  color: #030904;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <button>Save</button>
+</ul>
+<div class="code-area">
+
+  <textarea id="htmlCode" placeholder="HTML Code" 
+            oninput="showPreview()"></textarea>
+  <textarea id="cssCode" placeholder="CSS Code" 
+            oninput="showPreview()"></textarea>
+  <textarea id="jsCode" placeholder="JavaScript Code" 
+            oninput="showPreview()"></textarea>       
+</div>
+</div>
+<div class="preview-area">
+  <iframe id="preview-window"></iframe>
+</div>
+<script>
+  function showPreview(){
+  var htmlCode = document.getElementById("htmlCode").value;
+  var cssCode = "<style>"+document.getElementById("cssCode").value+"</style>";
+  var jsCode = "<scri"+"pt>"+document.getElementById("jsCode").value+"</scri"+"pt>";
+  var frame = document.getElementById("preview-window").contentWindow.document;
+  frame.open();
+  frame.write(htmlCode+cssCode+jsCode);
+  frame.close();
+}
+</script>
+</body>
+</html>

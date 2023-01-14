@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<!--Code by Divinector (www.divinectorweb.com)-->
+<html lang="en">
+<head>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.6.2/animate.min.css" rel="stylesheet">
+  
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+ <style>
+     body {
+    font-family: 'Poppins', sans-serif;
+
+     background: white;
+
+}
+
+.brand {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.brand span {
+  color: #ffffff;
+}
+
+.company-info {
+  background: transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: -200px;
+}
+.mid {
+        position: absolute;
+        top: 365%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+      }
+      .btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: #f1f1f1;
+        margin: 10px;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px #00000070;
+        color: #3498db;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+      }
+      .btn i {
+        line-height: 50px;
+        font-size: 26px;
+        transition: 0.2s linear;
+      }
+      .btn:hover i {
+        transform: scale(1.3);
+        color: #f1f1f1;
+      }
+      .btn::before {
+        content: '';
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: #3498db;
+        transform: rotate(45deg);
+        left: -110%;
+        top: 90%;
+      }
+      .btn:hover::before {
+        animation: flash 0.7s 1;
+        top: -10%;
+        left: -10%;
+      }
+      @keyframes flash {
+        0% {
+          left: -100%;
+          top: 90%;
+        }
+        50% {
+          left: 10%;
+          top: -30%;
+        }
+        100% {
+          left: -10%;
+          top: -10%;
+        }
+      }
+.company-info h3,
+.company-info ul {
+  text-align: center;
+  margin-left: 20px;
+  }
+  .contact {
+  background: black;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.contact h3{
+  color: #fff;
+}
+/* ---- */
+/* FORM */
+/* ---- */
+
+.contact form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact form label {
+  //display:;
+  color: #fff;
+}
+
+.contact form p {
+  margin: 0;
+}
+
+.contact form .full {
+  grid-column: 1 / 3;
+}
+
+.contact form button,
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 1em;
+  border: solid 1px #627EDC;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form button {
+  background: #627EDC;
+  border: 0;
+  color: #e4e4e4;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact form button:hover,
+.contact form button:focus {
+  background: #3952a3;
+  color: #ffffff;
+  outline: 0;
+  transition: background-color 2s ease-out;
+}
+@media only screen and (min-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .wrapper > * {
+    padding: 2em;
+  }
+
+  .company-info {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .contact {
+    border-radius: 0 4px 4px 0;
+    color: black;
+  }
+
+  .company-info h3,
+  .company-info ul,
+  .brand {
+    text-align: left;
+  }
+}
+
+.middle{
+  position: absolute;
+  top: 135%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card{
+  cursor: pointer;
+  width: 263px;
+  height: 265px;
+  
+
+}
+.front,.back{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  background-color: #fff;
+  border: 1px solid skyblue;
+  border-radius: 15px;
+  
+ 
+}
+.front img{
+  height: 100%;
+  background-color: deepskyblue;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back{
+  background: #f1f1f1;
+  transform: perspective(600px) rotateY(180deg);
+
+}
+.back-content{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top: -210px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.middle1{
+  position: absolute;
+  top: 140%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+}
+.card1{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+
+
+}
+.front1,.back1{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  background-color: #fff;
+  border: 1px solid skyblue;
+  border-radius: 12px;
+  
+
+}
+.front1 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: blue;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.front1{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back1{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content1{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+ margin-top: -210px;
+ margin-left: -50px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card1:hover > .front1{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card1:hover > .back1{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.middle2{
+  position: absolute;
+  top: 180%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card2{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+}
+.front2,.back2{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  background-color: #fff;
+  border: 1px solid skyblue;
+  border-radius: 15px;
+  
+}
+.front2 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front2{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back2{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content2{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top: -312px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card2:hover > .front2{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card2:hover > .back2{
+  transform: perspective(600px) rotateY(0deg);
+}
+.middle3{
+  position: absolute;
+  top: 185%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+}
+.card3{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+}
+.front3,.back3{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  background-color: #fff;
+  border: 1px solid skyblue;
+  border-radius: 15px;
+
+  
+  
+}
+.front3 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front3{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back3{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content3{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top: -324px;
+  margin-left: -50px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card3:hover > .front3{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card3:hover > .back3{
+  transform: perspective(600px) rotateY(0deg);
+}
+.middle4{
+  position: absolute;
+  top: 246%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card4{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+}
+.front4,.back4{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+  background-color: #fff;
+  border-radius: 15px;
+  
+}
+.front4 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front4{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back4{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content4{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top:-490px;
+  
+}
+
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card4:hover > .front4{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card4:hover > .back4{
+  transform: perspective(600px) rotateY(0deg);
+}
+.mo{
+   border: 2px solid #fff;
+  padding: 2px 6px;
+  border-radius: 9px;
+  
+  margin-top:1%;
+  width: 60%;
+  height: 40px;
+  background: #333;
+  color: #fff;
+ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.mo:hover{
+  background: black;
+}
+.mo1{
+   border: 2px solid #fff;
+  padding: 2px 6px;
+  border-radius: 9px;
+  margin-top:3%;
+  width: 60%;
+  height: 40px;
+  background: #333;
+  color: #fff;
+ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.mo1:hover{
+  background: black;
+}
+.mo2{
+   border: 2px solid #fff;
+  padding: 2px 6px;
+  border-radius: 9px;
+  margin-top:3%;
+  width: 60%;
+  height: 40px;
+  background: #333;
+  color: #fff;
+ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.mo2:hover{
+  background: black;
+}
+
+
+.middle5{
+  position: absolute;
+  top: 252%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+}
+.card5{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+}
+.front5,.back5{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+   background-color: #fff;
+   border-radius: 15px;
+  
+}
+.front5 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front5{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back5{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content5{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top: -512px;
+  margin-left: -50px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card5:hover > .front5{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card5:hover > .back5{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.middle6{
+  position: absolute;
+  top: 290%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card6{
+  cursor: pointer;
+   width: 263px;
+  height: 265px;
+}
+.front6,.back6{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+   background-color: #fff;
+   border-radius: 15px;
+  
+}
+.front6 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front6{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back6{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content6{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top: -612px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card6:hover > .front6{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card6:hover > .back6{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.middle7{
+  position: absolute;
+  top: 295%;
+  left: 70%;
+  transform: translate(-50%,-50%);
+}
+.card7{
+  cursor: pointer;
+  width: 263px;
+  height: 265px;e
+}
+.front7,.back7{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+   background-color: #fff;
+   border-radius: 15px;
+  
+}
+.front7 img{
+  height: 100%;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.front7{
+  transform: perspective(600px) rotateY(0deg);
+}
+.back7{
+  background: #f1f1f1;
+
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content7{
+  color: #2c3e50;
+  text-align: center;
+  width: 100%;
+  margin-top:-370px;
+}
+.sm{
+  margin: 20px 0;
+}
+.sm a{
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #2c3e50;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%
+}
+.sm a:hover{
+  background: #2c3e50;
+  color: white;
+}
+.card7:hover > .front7{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card7:hover > .back7{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+@keyframes example1 {
+  0% {
+    background: white;
+    }
+    /* Adding a step in the middle */
+    50% {
+    background: white;
+    }
+    100% {
+    background: white;
+    }
+
+}
+
+ /* The animation code */
+@keyframes example2 {
+  0% {
+    background: white;
+    }
+    /* Adding a step in the middle */
+    50% {
+    background: white;
+    }
+    100% {
+    background: white;
+    }
+
+}
+
+ /* The animation code */
+@keyframes example3 {
+  0% {
+    background: white;
+    }
+    /* Adding a step in the middle */
+    50% {
+    background: white;
+    }
+    100% {
+    background: white;
+    }
+
+}
+
+#center-text {          
+  display: flex;
+  flex: 1;
+  flex-direction:column; 
+  justify-content: center;
+  align-items: center;  
+  height:100%;
+  
+}
+#chat-circle {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: #5A5EB9;
+  width: 40px;
+  height: 40px;  
+  border-radius: 50%;
+  color: white;
+  padding: 28px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn#my-btn {
+     background: white;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    border-radius: 45px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #5865C3;
+}
+#chat-overlay {
+    background: rgba(255,255,255,0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: none;
+}
+
+
+.chat-box {
+  display:none;
+  background: #efefef;
+  position:fixed;
+  right:30px;
+  bottom:50px;  
+  width:350px;
+  max-width: 85vw;
+  max-height:100vh;
+  border-radius:5px;  
+/*   box-shadow: 0px 5px 35px 9px #464a92; */
+  
+}
+.chat-box-toggle {
+  float:right;
+  margin-right:15px;
+  cursor:pointer;
+}
+.chat-box-header {
+  background: #5A5EB9;
+  height:70px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px; 
+  color:white;
+  text-align:center;
+  font-size:20px;
+  padding-top:17px;
+}
+.chat-box-body {
+  position: relative;  
+  height:370px;  
+  height:auto;
+  border:1px solid #ccc;  
+  overflow: hidden;
+}
+.chat-box-body:after {
+  content: "";
+  background: transparent;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height:100%;
+  position: absolute;
+  z-index: -1;   
+}
+#chat-input {
+  background: #f4f7f9;
+  width:80%; 
+  position:relative;
+  height:47px;  
+  padding-top:10px;
+  padding-right:50px;
+  padding-bottom:10px;
+  padding-left:15px;
+  border:none;
+  resize:none;
+  outline:none;
+  border:1px solid #ccc;
+  color:#888;
+  border-top:none;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
+  overflow:hidden;  
+}
+.chat-input > form {
+    margin-bottom: 0;
+}
+#chat-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+  margin-left: 2px;
+}
+#chat-input::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+#chat-input:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+#chat-input:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
+.chat-submit {  
+  position:absolute;
+  bottom:5px;
+  right:10px;
+  background: transparent;
+  box-shadow:none;
+  border:none;
+  border-radius:50%;
+  color:#5A5EB9;
+  width:35px;
+  height:35px;  
+}
+.chat-logs {
+  padding:10px; 
+  height:370px;
+  overflow-y:scroll;
+}
+
+.chat-logs::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar
+{
+  width: 5px;  
+  background-color: #F5F5F5;
+}
+
+.chat-logs::-webkit-scrollbar-thumb
+{
+  background-color: #5A5EB9;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+   .chat-logs {
+        height:40vh;
+    }
+}
+
+
+.cm-msg-text {
+  background:white;
+  padding:10px 15px 10px 15px;  
+  color:#666;
+  max-width:75%;
+  float:left;
+  margin-left:10px; 
+  position:relative;
+  margin-bottom:20px;
+  border-radius:30px;
+}
+.chat-msg {
+  clear:both;    
+}
+.chat-msg.self > .cm-msg-text {  
+  float:right;
+  margin-right:4px;
+  background: #5A5EB9;
+  color:white;
+}
+.cm-msg-button>ul>li {
+  list-style:none;
+  float:left;
+  width:50%;
+}
+.cm-msg-button {
+    clear: both;
+    margin-bottom: 70px;
+}
+
+
+header .carousel-inner .item {
+    height: 100vh;
+}
+.navbar-inverse {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-inverse .navbar-brand {
+    color: blue;
+    font-size: 40px;
+    padding: 40px 15px;
+    font-weight: 900;
+}
+.nav.navbar-nav.navbar-right {
+    margin: 25px 0;
+
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.banner {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.carousel-caption {
+    padding-bottom: 250px;
+    font-family: poppins;
+}
+.carousel-caption h2 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.carousel-caption h2 span {
+    color: #EDBB00;
+}
+.carousel-caption a {
+    background: #EDBB00;
+    padding: 15px 35px;
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 25px;
+}
+.carousel-control.right {
+    background-image: none;
+}
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-indicators .active {
+    background-color: #EDBB00;
+    border-color: #EDBB00;
+}
+/*responsive css*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .carousel-caption {
+        padding-bottom: 350px;
+    }
+    .carousel-caption h2 {
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .navbar-inverse .navbar-brand {
+        font-size: 30px;
+        padding: 20px 15px;
+    }
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    <div><h2 style="font-size: 32px; font-weight: 500;  color: #fff; margin-top: 20%; margin-left: 90px; text-align: left;">welcome to Desk</h2>
+        <p style="text-align: left; margin-left: 90px; margin-top: 6%; color: #fff;">ihSdn oishfhno sgohgng 
+        kdd hoiosdjgSNoijosfgnfhnhgoshNg </p>
+        <br>
+        <p style="text-align: left; margin-left: 90px;">khfkNf kjkhfiusn iuhsldlfnsodify dfniusyfin iuu</p></div>
+
+    .carousel-caption {
+        padding-bottom: 120px;
+    }
+    .carousel-caption h2 {
+        font-size: 25px;
+    }
+    .carousel-caption h3 {
+        font-size: 18px;
+    }
+    .carousel-caption a {
+        padding: 10px 25px;
+    }
+
+background-image{
+    -webkit-filter: blur(10px); 
+  filter: blur(10px);
+}
+
+
+ </style>
+
+</head>
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            
+            <div class="container">
+                
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img  src="logo.png">
+                 
+                </div>
+<div id="body"> 
+  
+<div id="chat-circle" class="btn btn-raised">
+        <div id="chat-overlay"></div>
+        <i  class="fas fa-plus" style="margin-top: -20px; margin-left: -10px;"></i>
+  </div>
+  
+  <div class="chat-box">
+    <div class="chat-box-header">
+      
+      <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+    </div>
+    <div class="chat-box-body">
+      <div class="chat-box-overlay">   
+      </div>
+      <div class="chat-logs">
+       
+      </div><!--chat-log -->
+    </div>
+    <div class="chat-input">      
+      <form>
+        <input type="text" id="chat-input" placeholder="Send a message..."/>
+      <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+      </form>      
+    </div>
+  </div>
+</div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#carousel-example-generic">Home</a></li>
+                        <li><a href="#Nishant">feature</a></li>
+                        <li><a href="/DESK/test.html">About</a></li>
+                       
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+                
+              
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="banner" style=" background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(1.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated bounceInRight" style="animation-delay: 1s"> Hello, <span>GEEK</span></h2>
+                        <h3 class="animated bounceInLeft" style="animation-delay: 2s">Like Desk like never Before</h3>
+                        <p class="animated bounceInRight" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(2.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated slideInDown" style="animation-delay: 1s">Code  <span>Editor</span></h2>
+                        <h3 class="animated fadeInUp" style="animation-delay: 2s">Code Anywhere Everywhere</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/codeeditor.html">Visit</a></p>
+                    </div>
+                </div>
+              <!--  <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0.5, 0.5)), url(3.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Coding <span>Questions</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Have a Break, Have  Coding Question</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Visit</a></p>
+                    </div>
+                </div> -->
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(10.jpg);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Coding <span>Quiz</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Taste your coding skills </h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/final.html">Visit</a></p>
+                    </div>
+                </div>
+                
+               
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(5.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Code <span> Tutorial</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Never Stop Learning</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/codingtutorial.html">Visit</a></p>
+                    </div>
+                </div>
+                
+                 <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(11.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">To-DO  <span>List</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Make Todo and Schedule your Life</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/todo">Visit</a></p>
+                    </div>
+                </div>
+                
+                
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(6.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Expense<span> Manager</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Manage every single Penny you have</h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/ExpenseManager">Visit</a></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="banner" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(7.gif);"></div>
+                    <div class="carousel-caption">
+                        <h2 class="animated zoomIn" style="animation-delay: 1s">Forum <span>for EveryOne</span></h2>
+                        <h3 class="animated fadeInLeft" style="animation-delay: 2s">Let's Contribute </h3>
+                        <p class="animated zoomIn" style="animation-delay: 3s"><a href="/DESK/Forum.jsp">Visit </a></p>
+                    </div>
+                </div>
+              
+            </div>
+
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    
+    <div id="Nishant">
+   
+    <div class="row">
+      <div class="col-lg-4 card middle">
+        <div class="front">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFdGaanfbMviz-cZhgW012tLzeCI5auIpj8_Zj778B-qFZnYZMdbcTp1LKuybG3fOm70MqsdH4bAtv9w&usqp=CAU" alt="Nature" style="width:100%;">
+           
+        </div>
+        <div class="back">
+          <div class="back-content middle">
+            <div class="sm">
+              <p><b>Code Editor</b></p>
+              <p>if you want to be the finest coder, you have to face challenges and showcase your programming skills. And, the best way to do the same is Competitive Programming and Coding Competitions.</p>
+              <form action="/DESK/codeeditor.html"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of col -->
+      <div class="col-lg-6 card1 middle1">
+      <div class="front1">
+        <img src="data:image/webp;base64,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" alt="Nature" style="width:100%;">
+         
+            </div>
+            <div class="back1">
+              <div class="back-content1 middle1">
+                <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Quiz</b></p>A quiz is a form of game or mind sport in which players attempt to answer questions correctly measure growth in knowledge, abilities, or skills..</p>
+               <form action="/DESK/final.html"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+              </div>
+            </div>
+      </div>
+      <!-- end  -->
+    </div>
+    <div class="card2 middle2">
+      <div class="front2">
+        <img src="https://play-lh.googleusercontent.com/DuociTkA2k_hEo2k5fvBqGPAKLROAYDVEVmhj32A-i7GoBo7bxQl72cW5keyYuW-PQXb" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back2">
+        <div class="back-content2 middle2">
+          
+           <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Expense maneger</b></p>Expense management refers to the systems deployed by a business to process, pay, and audit employee-initiated expenses.</p>
+               <form action="/DESK/ExpenseManager"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card3 middle3">
+      <div class="front3">
+       <img src="data:image/png;base64,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" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back3">
+        <div class="back-content3 middle3">
+                     <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Todo List</b></p>It's a list of tasks you need to complete, or things that you want to do. Most typically, they're organised in order of priority.</p>
+               <form action="/DESK/todo"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="card4 middle4">
+      <div class="front4">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK-4ZknmtXUHU67iW1T4M4nZLEn-HuH2FVgA&usqp=CAU" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back4">
+        <div class="back-content4 middle4">
+                      <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Coding Questions</b></p>if you want to be the finest coder, you have to face challenges and showcase your programming skills. And, the best way to do the same is Competitive Programming and Coding Competitions.</p>
+              <button class="mo2">Visit</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card5 middle5">
+      <div class="front5">
+      <img src="https://www.careeraddict.com/uploads/article/58763/illustration-man-laptop-screen.png" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back5">
+        <div class="back-content5 middle5">
+          
+                   <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Online Tutorial</b></p>if you want to be the finest coder, you have to face challenges and showcase your programming skills. And, the best way to do the same is Competitive Programming and Coding Competitions.</p>
+               <form action="/DESK/codingtutorial.html"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card6 middle6">
+      <div class="front6">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrrcuanRCCwjwBf4hPRgQADRR14UkveADfA4SM7BHKN9kp8GpfLSQCl0pnLda8zQwvzlM&usqp=CAU" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back6">
+        <div class="back-content6 middle6">
+          
+                    <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Forum</b></p>if you want to be the finest coder, you have to face challenges and showcase your programming skills. And, the best way to do the same is Competitive Programming and Coding Competitions.</p>
+               <form action="/DESK/Forum.jsp"> <button type="submit" class="mo">Visit</button> </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="card7 middle7">
+      <div class="front7">
+       <img src="https://images.idgesg.net/images/article/2018/02/artificial_intelligence_ai_virtual_assistant_robot_chatbot_thinkstock_856909876-100749925-large.jpg" alt="Nature" style="width:100%;">
+         
+      </div>
+      <div class="back7">
+        <div class="back-content3 middle3">
+          
+                     <div class="sm">
+            
+              <p style="margin-top:-40px;"><p><b>Chatbot</b></p>if you want to be the finest coder, you have to face challenges and showcase your programming skills. And, the best way to do the same is Competitive Programming and Coding Competitions.</p>
+              <button class="mo2">Visit</button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+<!-- end of nishamt -->
+<div><h1 style="font-size: 40px; font-weight: 500;  color: #333; margin-top: 14%; margin-left: 70px; text-align: left;">Make "DESK" your's </h1>
+        <p style="text-align: left; margin-left: 90px; margin-top: 1%; color: #333; width: 500px; font-size: 17px; padding: 50px;margin: 20px; border-radius: 15px;">
+        We built the Complete Application from user's Perspective right from the start
+        we provide you almost all basic functionality were a student may have to struggle
+        you can easily use all our features in day to day life
+        we have packaged all required functionality under a hood for you
+        </p>
+        </div>
+<div><h2 style="font-size: 40px; font-weight: 500;  color: #333; margin-top: 30%; margin-left: 90px; text-align: left;"> Be  " PRODUCTIVE "  </h2>
+        <p style="text-align: left; margin-left: 90px; margin-top: 6%; color: #333; font-size: 17px; width: 600px;padding: 50px;margin: 20px;"> 
+            PRODUCTIVITY was the only moto behind developing this application <br>
+        We have Provided all features which 
+        try to boost your productivity you can use for features 
+        like TODO-List Questions , Quiz , Tutorial 
+        to help you being productive and focused all the time; </p>
+        </div>
+
+<div   id="Contact" style="margin-top: 19%;  height: 380px; padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;" class="about-section">
+  <div class="container">
+  <h1 class="brand"></h1>
+  <div class="wrapper">
+
+    <!-- COMPANY INFORMATION -->
+    <div class="company-info">
+      <h2 style="margin-left: -180px;"> DESK</h2>
+
+      <ul>
+        <li><i class="fa fa-road">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</i>  DESK.inc</li>
+        <li><i class="fa fa-phone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</i> Main Street , Mumbai</li>
+        <li><i class="fa fa-envelope"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i> DESK@gmail.com</li>
+      </ul>
+      <div class="mid">
+    
+      <a class="btn" href="#" style="margin-top: 200px;">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="btn" href="#" style="margin-top: 200px;" >
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a class="btn" href="#" style="margin-top: 200px;" >
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    </div>
+    
+    
+
+  </div>
+  <div style="margin-top:-140px; margin-left: -440px;">
+  <ul >
+    <h1>Features</h1>
+    <a href="/DESK/codeeditor.html"><p>CODE EDITOR</p></a>
+    <a href="#"><p>CODING QUESTIONS</p></a>
+    <a href="/DESK/final.html"><p>CODING QUIZ</p></a>
+      </ul>
+    </div>
+    <div style="margin-top:-150px; margin-left: 21%;">
+  <ul>
+    <h1>Features</h1>
+    <a href="/DESK/codingtutorial.html"> <p>CODING TUTORIAL</p> </a>
+    <a href="/DESK/ExpenseManager"> <p>EXPENSE MANAGER</p> </a>
+    <a href="/DESK/todo"> <p>TO-DO LIST</p> </a>
+        
+      </ul>
+    </div>
+    <div style="margin-top:-150px; margin-left:73%;">
+  <ul>
+    <h1>Features</h1>
+    <a href="/DESK/Forum.jsp"> <p>FORUM</p> </a>
+    <a href="#"><p>CHAT BOT</p></a> 
+  
+      </ul>
+    </div>
+  </div>
+  <div style="   font-family: 'Poppins', sans-serif;">
+  
+ </div>
+</div>
+</header>
+ 
+
+         <script src="js/app.js"></script>
+    <script>
+      
+  
+  //create initial layout
+  
+  $(function() {
+  var INDEX = 0; 
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val(); 
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+    var buttons = [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ];
+    setTimeout(function() {      
+      generate_message(msg, 'user');  
+    }, 1000)
+    
+  })
+  
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    str += "          <span class=\">";
+    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+     $("#chat-input").val(''); 
+    }    
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+  }  
+  
+  function generate_button_message(msg, buttons){    
+    /* Buttons should be object array 
+      [
+        {
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }
+      ]
+    */
+    INDEX++;
+    var btn_obj = buttons.map(function(button) {
+       return  "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\""+button.value+"\">"+button.name+"<\/a><\/li>";
+    }).join('');
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg user\">";
+    str += "          <span class=\">";
+    str += "            <img src=\"https:\/\/image.crisp.im\/avatar\/operator\/196af8cc-f6ad-4ef7-afd1-c45d5231387c\/240\/?1483361727745\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "          <div class=\"cm-msg-button\">";
+    str += "            <ul>";   
+    str += btn_obj;
+    str += "            <\/ul>";
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);   
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);
+    $("#chat-input").attr("disabled", true);
+  }
+  
+  $(document).delegate(".chat-btn", "click", function() {
+    var value = $(this).attr("chat-value");
+    var name = $(this).html();
+    $("#chat-input").attr("disabled", false);
+    generate_message(name, 'self');
+  })
+  
+  $("#chat-circle").click(function() {    
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+})
+  
+
+  
+</script>
+
+</body>
+</html>
