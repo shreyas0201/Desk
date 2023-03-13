@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+    <script async src=//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.min.js></script>
+    <link rel=stylesheet href=https://use.typekit.net/mrg0hpc.css>
+    <title>silder</title>
+    <link rel=stylesheet id=custom-style-css href="https://www.geeksforgeeks.org/wp-content/themes/iconic-one/css/gfg.min.css?ver=8.40" media=all>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js?ver=3.1.1"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js?ver=3.0.0"></script>
+
+    <style>
+             .html{
+                background: white;
+                background-color: white;
+                height: 800px;
+            }
+            
+            .topPanel{
+                margin-top: -5px;
+                margin-left: -8px;
+                width: 101.2%;
+                height: 60px;
+                box-shadow: 1px 1px 7px 2.7px lightgray;
+                background-color: white;
+            }
+            
+            .image{
+                width: 99.9%;
+                height: 550px;
+                margin-left: -7px;
+                position: absolute;
+            }
+            
+            .quiz{
+                width: 1100px;
+                height: 300px;
+                position: absolute;
+                margin-left: -250px;
+            }
+            
+            .title{
+                position: absolute;
+                font-size: 70px;
+                font-family: sans-serif;
+                font-weight: bolder;
+                letter-spacing: 2px; 
+                margin-top: 100px;
+                margin-left: 70px;
+                color: white;
+            }
+            .info{
+                position: absolute;
+                margin-top: 200px;
+                margin-left: 73px;
+                font-weight: normal;
+                font-size: 20px;
+                letter-spacing: 1px;
+                word-spacing: 1px;
+            }
+            
+            .getstarted{
+                position: absolute;
+                margin-top: 400px;
+                margin-left: 70px;
+                background-color: #ff6666;
+                color: white;
+                height: 40px;
+                width: 100px;
+            }
+            
+            .button {
+                position:absolute;
+                margin-top: 320px;
+                margin-left: 70px;
+                padding: 17px 63px;
+                border: 0px solid #ff6666;
+                border-radius: 10px;
+                background: #ff6666;
+                background: -webkit-gradient(linear, left top, left bottom, from(#ff6666), to(#ff6666));
+                background: -moz-linear-gradient(top, #ff6666, #ff6666);
+                background: linear-gradient(to bottom, #ff6666, #ff6666);
+                -webkit-box-shadow: #d99516 0px 2px 1px 2px;
+                -moz-box-shadow: #d99516 0px 2px 1px 2px;
+                box-shadow: #d99516 0px 2px 1px 2px;
+                font: normal normal bold 18px arial;
+                color: #ffffff;
+                text-align:left;
+                height: 50px;
+                width: 140px;
+            }
+            
+            .button:hover,
+            .button:focus {
+                border: 0px solid #ff8585;
+                background: #ff7a7a;
+                background: -webkit-gradient(linear, left top, left bottom, from(#ff7a7a), to(#ff7a7a));
+                background: -moz-linear-gradient(top, #ff7a7a, #ff7a7a);
+                background: linear-gradient(to bottom, #ff7a7a, #ff7a7a);
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .button:active {
+                background: #993d3d;
+                background: -webkit-gradient(linear, left top, left bottom, from(#993d3d), to(#ff6666));
+                background: -moz-linear-gradient(top, #993d3d, #ff6666);
+                background: linear-gradient(to bottom, #993d3d, #ff6666);
+            }
+ 
+        </style>
+</head>
+
+
+<body>
+    
+     <div class="topPanel">
+            <img src="logo.png" style="margin-top: -2px; margin-left: 15px; height: 55px; width: 170px;">
+                      <a href="silder.html"><button type="submit" class=""style=" position: absolute;  width: 100px; height: 40px; font-size: 17.5px; margin-left: 800px; margin-top: 10px; background-color: white; color: #1a73e8; border-color: white; border: 1px transparent; ">Home</button> </a>
+            <button type="submit" style=" position: absolute; width: 100px; height: 40px; font-size: 17.5px; margin-left: 900px; margin-top: 10px;  background-color: white; color: #1a73e8; border-color: white; border: 1px transparent; ">Features</button>
+       </div>
+
+        
+        <img src="quizbackground6.jpg" class="image">
+        <!--<img src="abca.png" class="quiz"> -->
+        
+        <h1 class="title"> Quiz Time </h1>
+  
+        <h3 class="info" >
+            Knowledge is power knowledge about<br>
+            Computer Science to our world of Geeks!
+            <br>Master the art of coding by testing and compiling
+        </h3>
+        
+    <a href="href = questionspage.html"> <button  class="button"> <div style="display: inline-block; margin-left: -40px; width: 100px; ">  Get Started </div> </button></a>
+
+        
+        
+        <label style="margin-top: 600px; margin-left: 100px; font-size: 33px; position: absolute;">
+            Pick a QUIZ
+        </label>
+        
+        <div id=main>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css>
+    
+    <div class=outer--container>
+        <div style="height: 200vh; margin-bottom: -100px;" class=about--container>
+            <div  class="about--container_content pt-0">
+                <div class=about--container_row >
+                    <div style="margin-top: 55%;" class="about-services--carousel owl-carousel owl-theme">
+                       
+                        <div class=item>
+                            <div class=item-card>
+                                <div class=content>
+                                    <div class=image-wrap>
+                                        <img src="jaico.png" style="height: 120px; margin-top: -15px; width: 150px;">
+                                    </div>
+                                    <div class="text text-sm">There is no ave number of problems and courses just for you! sdf
+                                    sdf
+                                    df sdf sd f</div>
+                                    <div class=btn-wrap>
+                                        <form action="questionspage.html" method="POST">
+                                            <button  type="submit" class=btn-wrap_ref style="margin-left: 90px;">Start Quiz</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class=item>
+                            <div class=item-card>
+                                <div class=content>
+                                    <div class=image-wrap>
+                                        <img src="pyic.png" style= "height: 60%; margin-bottom: 10px; max-width:80%;margin-left:10%" class=img-fluid alt="GeeksforGeeks Premium Logo">
+                                    </div>
+                                    <div class="text text-sm" style="margin-top: -60px;">Get doubt assistance and ad-free content at a minimal price, become a Premium user today!</div>
+                                    <div class=btn-wrap>
+                                        <form action="Instructions?val=2" method="POST">
+                                            <button  type="submit" class=btn-wrap_ref style="margin-left: 90px;">Start Quiz</button>
+                                        </form>          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class=item>
+                            <div class=item-card>
+                                <div class=content>
+                                    <div class=image-wrap>
+                                        <img src="dic.png" class=img-fluid alt="Write Logo">
+                                    </div>
+                                    <div class="text text-sm">Knowledge is power knowledge about
+Computer Science to our world of Geeks!</div>
+                                    <div class=btn-wrap>
+                                        <form action="Instructions?val=4" method="POST">
+                                            <button  type="submit" class=btn-wrap_ref style="margin-left: 90px;">Start Quiz</button>
+                                        </form> </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class=item>
+                            <div class=item-card>
+                                <div class=content>
+                                    <div class=image-wrap>
+                                        <img src="jsic.png" class=img-fluid alt="Write Logo">
+                                    </div>
+                                    <div class="text text-sm">Knowledge is power! Come with us and contribute your knowledge about
+Computer Science to our world of Geeks!</div>
+                                    <div class=btn-wrap>
+                                        <form action="Instructions?val=3" method="POST">
+                                            <button  type="submit" class=btn-wrap_ref style="margin-left: 90px;">Start Quiz</button>
+                                        </form>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        <div class=item>
+                            <div class=item-card>
+                                <div class=content>
+                                    <div class=image-wrap>
+                                        <img src="dbic.png" class=img-fluid alt="IDE Logo">
+                                    </div>
+                                    <div class="text text-sm">Master the art of coding by testing and compiling
+your codes at our IDE platform!</div>
+                                    <div class=btn-wrap>
+                                        <form action="Instructions?val=5" method="POST">
+                                            <button  type="submit" class=btn-wrap_ref style="margin-left: 90px;">Start Quiz</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js></script>
+    <script>
+        jQuery(function() {
+            var owl = jQuery('.about--carousel');
+            owl.owlCarousel({
+                autoplay: true,
+                lazyLoad: true,
+                loop: true,
+                margin: 0,
+                responsiveClass: false,
+                autoHeight: false,
+                autoplayTimeout: 10000,
+                smartSpeed: 800,
+                nav: false,
+                dots: true,
+                center: false,
+                items: 1,
+                autoplayHoverPause: false
+            })
+            var owl2 = jQuery('.about-services--carousel');
+            owl2.owlCarousel({
+                autoplay: true,
+                lazyLoad: true,
+                loop: true,
+                margin: 0,
+                responsiveClass: false,
+                autoHeight: false,
+                autoplayTimeout: 10000,
+                smartSpeed: 800,
+                nav: true,
+                dots: false,
+                center: true,
+                items: 3,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    480: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    991: {
+                        items: 3
+                    }
+                }
+            })
+            jQuery('.play').on('click', function() {
+                owl.trigger('play.owl.autoplay', [1000])
+                owl2.trigger('play.owl.autoplay', [1000])
+            })
+            jQuery('.stop').on('click', function() {
+                owl.trigger('stop.owl.autoplay')
+                owl2.trigger('stop.owl.autoplay')
+            })
+        })
+    </script>
+
+
+</body>
+</html>
